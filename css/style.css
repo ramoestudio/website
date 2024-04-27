@@ -1,0 +1,51 @@
+body {
+    font-family: 'Satoshi', sans-serif;                                     
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+  }
+
+#header{
+    position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+    
+      z-index: 1000;
+    
+  }
+
+  .fade-image {
+    transition: opacity 1s ease; 
+  }
+
+  .image-hidden {
+    opacity: 0;
+  }
+
+ 
+  .fade-text {
+    white-space: nowrap;
+    overflow: hidden;
+    width: 0;
+    animation: type 3s steps(20) forwards, blink-caret 0.75s step-end infinite;
+    margin: 0 auto; 
+  }
+
+  @keyframes type {
+    from {
+      width: 0;
+    }
+    to {
+      width: 100%;
+    }
+  }
+
+  @keyframes blink-caret {
+    from, to {
+      border-color: transparent;
+    }
+    50% {
+      border-color: orange;
+    }
+  }
