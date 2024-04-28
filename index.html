@@ -57,7 +57,11 @@
                     </a>
                   </div>
                 </div>
-                
+
+                <footer class="footer">
+                  <div class="date" id="date"></div>
+                  <div class="time" id="time"></div>
+                </footer>
       
               </div>
             </div>
@@ -182,6 +186,34 @@ const texts = ["COMING SOON"];
 
   type(); 
 </script>
+
+<script>
+  function updateTime() {
+    const now = new Date();
+    const hours = now.getHours().toString().padStart(2, '0');
+    const minutes = now.getMinutes().toString().padStart(2, '0');
+    const seconds = now.getSeconds().toString().padStart(2, '0');
+    document.getElementById('time').textContent = hours + ':' + minutes + ':' + seconds;
+  }
+
+  function updateDate() {
+    const now = new Date();
+    const daysOfWeek = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+    const monthsOfYear = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+    const dayOfWeek = daysOfWeek[now.getDay()];
+    const dayOfMonth = now.getDate().toString().padStart(2, '0');
+    const month = monthsOfYear[now.getMonth()];
+    const year = now.getFullYear();
+    document.getElementById('date').textContent = dayOfWeek + ', ' + month + ' ' + dayOfMonth + ', ' + year;
+  }
+
+  updateTime();
+  setInterval(updateTime, 1000); // Update time every second
+
+  updateDate();
+  setInterval(updateDate, 60000); // Update date every minute
+</script>
+
 </body>
 </html>
 
