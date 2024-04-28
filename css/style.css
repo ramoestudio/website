@@ -41,11 +41,18 @@ body {
     }
   }
 
-  @keyframes blink-caret {
-    from, to {
-      border-color: transparent;
-    }
-    50% {
-      border-color: orange;
-    }
+   .footer {
+    position: fixed;
+    bottom: 0;
+    padding-bottom: 20px;
+      
+  }
+
+  .footer .date {
+    float: left;
+    padding-right: 145px;
+  }
+  .footer .time {
+  
+    float: right;
   }
