@@ -80,11 +80,11 @@
       <br>
       <br>
       
-      <section id="logo">
+      <section id="logo" class="first-scrolled-content">
         <div class="container">
           <div class="row justify-content-center align-items-center">
             <div class="col-12 text-center">
-              <img src="./images/GIF_RAMOE UPDATE.gif" alt="ramoe_logo" class="img-fluid mb-4" style="max-height: 700px;"> <br>
+              <img src="./images/GIF_RAMOE UPDATE.gif" alt="ramoe_logo" class="img-fluid mb-4 fade-image" style="max-height: 700px;"> <br>
               
             </div>
           </div>
@@ -224,6 +224,33 @@ const texts = ["WORKS"];
 
   updateDate();
   setInterval(updateDate, 60000); // Update date every minute
+</script>
+<script>
+  function applyParallaxEffect(className) {
+    var scrolledContent = document.querySelector(className);
+    var windowHeight = window.innerHeight;
+
+    window.addEventListener('scroll', function() {
+      var scrollPosition = window.scrollY;
+      var elementOffsetTop = scrolledContent.offsetTop;
+
+      if (scrollPosition + windowHeight > elementOffsetTop) {
+        // Adjust the value below to control the speed of the scroll effect
+        var scrollSpeed = 0.5;
+
+        // Calculate the amount of movement based on scroll position
+        var moveAmount = (scrollPosition - elementOffsetTop) * scrollSpeed;
+
+        // Apply transform to move the content horizontally
+        scrolledContent.style.transform = 'translateX(-' + moveAmount + 'px)';
+      }
+    });
+  }
+
+  // Panggil fungsi untuk menerapkan efek paralaks pada setiap elemen
+  applyParallaxEffect('.first-scrolled-content');
+  applyParallaxEffect('.second-scrolled-content');
+  // Dan seterusnya...
 </script>
 
 </body>
