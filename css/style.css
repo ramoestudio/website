@@ -61,3 +61,8 @@ body {
     text-align: justify;
   }
 
+
+  .fixed-size {
+    height: 30px;
+    overflow: hidden;
+}
