@@ -96,9 +96,9 @@
         <div class="row justify-content-center align-items-center">
           <div class="col-12 text-center">
             <h3 class="fade-text mb-4 fixed-size" style="letter-spacing: 5px"></h3>
-            <img src="./images/Artboard 1_Animali.png" alt="16 Animali"  class="img-fluid mb-4 fade-image" style="max-height: 700px;">
-            <img src="./images/Artboard 2_Animali.png" alt="16 Animali"  class="img-fluid mb-4 fade-image" style="max-height: 700px;">
-            <img src="./images/Artboard 3_Animali.png" alt="16 Animali"  class="img-fluid mb-4 fade-image" style="max-height: 700px;">
+            <img src="./images/Artboard 1_Animali.png" alt="16 Animali"  class="img-fluid mb-4 fade-image" style="max-height: 700px;"> <br>
+            <img src="./images/Artboard 2_Animali.png" alt="16 Animali"  class="img-fluid mb-4 fade-image" style="max-height: 700px;"> <br>
+            <img src="./images/Artboard 3_Animali.png" alt="16 Animali"  class="img-fluid mb-4 fade-image" style="max-height: 700px;"> <br>
             <img src="./images/Artboard 4_Animali.png" alt="16 Animali"  class="img-fluid mb-4 fade-image" style="max-height: 700px;">
           </div>
         </div>
@@ -233,7 +233,7 @@ setInterval(updateDate, 60000); // Update date every minute
 <script>
 function applyParallaxEffect(className) {
   var scrolledContent = document.querySelector(className);
-  var windowHeight = window.innerHeight;
+  var windowHeight = window.outerHeight;
 
   window.addEventListener('scroll', function() {
     var scrollPosition = window.scrollY;
