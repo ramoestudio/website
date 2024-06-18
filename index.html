@@ -136,7 +136,7 @@
 <script>
 window.addEventListener('scroll', function() {
   var fadeImages = document.querySelectorAll('.fade-image');
-  var windowHeight = window.innerHeight;
+  var windowHeight = window.outerHeight;
 
   fadeImages.forEach(function(fadeImage) {
     var imageBottom = fadeImage.getBoundingClientRect().bottom;
@@ -147,6 +147,23 @@ window.addEventListener('scroll', function() {
     }
   });
 });
+</script>
+
+<script>
+  window.addEventListener('scroll', function() {
+    var rollOutElements = document.querySelectorAll('.roll-out');
+    var windowHeight = window.outerHeight; // Tinggi viewport
+  
+    rollOutElements.forEach(function(element) {
+      var elementTop = element.getBoundingClientRect().top;
+      
+      if (elementTop < windowHeight) {
+        element.classList.add('visible'); // Tambahkan class 'visible' jika elemen masuk ke dalam viewport
+      } else {
+        element.classList.remove('visible'); // Hapus class 'visible' jika elemen keluar dari viewport
+      }
+    });
+  });
 </script>
 
 <script>
