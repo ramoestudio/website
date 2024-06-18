@@ -85,3 +85,17 @@ body {
   margin-left: 20px; 
 
 }
+
+
+@media (min-width: 576px) {
+.roll-out {
+  opacity: 0; 
+  transform: translateY(40px); 
+  transition: opacity 1s ease, transform 1s ease; 
+}
+
+.roll-out.visible {
+  opacity: 1; 
+  transform: translateY(0); 
+}
+}
