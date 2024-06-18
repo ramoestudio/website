@@ -50,14 +50,16 @@ body {
       
   }
 
-  .footer .date {
-    float: left;
-    padding-right: 110px;
+  .footer {
+    display: flex; /* Mengatur elemen footer menggunakan display flex */
+    justify-content: space-between; /* Menyusun elemen dengan sejumlah ruang yang sama antara elemen */
+    align-items: center; /* Memastikan elemen footer sejajar */
   }
-  .footer .time {
   
-    float: right;
+  .time {
+    margin-left: 9rem; /* Memberikan margin otomatis di sebelah kiri elemen 'time' */
   }
+
 
  .sejajar {
     text-align: justify;
