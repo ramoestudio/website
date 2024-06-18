@@ -14,7 +14,8 @@ body {
       z-index: 1000;
     
   }
-@media (max-width: 576px) {
+
+  @media (max-width: 576px) {
   .fade-image {
     transition: opacity 2s ease; 
   }
