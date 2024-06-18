@@ -20,7 +20,7 @@ body {
   }
 
   .image-hidden {
-    opacity: 0.1;
+    opacity: 0;
   }
 }
 
