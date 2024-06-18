@@ -16,11 +16,11 @@ body {
   }
 
   .fade-image {
-    transition: opacity 3s ease; 
+    transition: opacity 2s ease; 
   }
 
   .image-hidden {
-    opacity: 0.5;
+    opacity: 0.1;
   }
 
  
