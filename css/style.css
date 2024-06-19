@@ -92,7 +92,7 @@ body {
 @media (min-width: 576px) {
 .roll-out {
   opacity: 0; 
-  transform: translateY(40px); 
+  transform: translateX(-50px); 
   transition: opacity 1s ease, transform 1s ease; 
 }
 
