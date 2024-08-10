@@ -8,7 +8,37 @@
     <link rel="stylesheet" href="./css/style.css">
     <link href="https://fonts.cdnfonts.com/css/satoshi" rel="stylesheet">
     <link rel="icon" href="./images/[SVG] RAMOE_LOGO.svg" type="image/svg+xml">
-                
+    <style>
+      @keyframes slideDown {
+        0% {
+          transform: translateY(-100%);
+          opacity: 0;
+        }
+        100% {
+          transform: translateY(0);
+          opacity: 1;
+        }
+      }
+      
+      @keyframes slideUp {
+        0% {
+          transform: translateY(100%);
+          opacity: 0;
+        }
+        100% {
+          transform: translateY(0);
+          opacity: 1;
+        }
+      }
+      
+      .img-slide-down {
+        animation: slideDown 1s ease-out;
+      }
+      
+      .img-slide-up {
+        animation: slideUp 1s ease-out;
+      }
+    </style>            
                 
 </head>
 <body class="bg-body-tertiary" >
@@ -41,10 +71,10 @@
         <div class="container">
             <div class="row justify-content-center align-items-center mx-4">
                 <div class="col-md-4 text-center">
-                    <img src="./images/mockup a (1).jpg" alt="ramoe_logo" class="img-fluid mb-4" style="max-height: 500px;">
+                    <img src="./images/mockup a (1).jpg" alt="ramoe_logo" class="img-fluid mb-4 img-slide-down" style="max-height: 500px;">
                 </div>
 
-                <div class="col-md text-center">
+                <div class="col-md text-center img-slide-up">
                   <img src="./images/BIZCARD_FOR WEBISTE.jpg" alt="ramoe_logo" class="img-fluid mb-4 ">
                   <p class="fade-text mb-6 fixed-size fw-bold" style="letter-spacing: 5px"></p> <br>
                   <p> aprahmasari@gmail.com</p>
