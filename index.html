@@ -7,7 +7,38 @@
   <link rel="stylesheet" href="./css/style.css">
   <link href="https://fonts.cdnfonts.com/css/satoshi" rel="stylesheet">
   <link rel="icon" href="./images/[SVG] RAMOE_LOGO.svg" type="image/svg+xml">
-              
+
+  <style>
+    @keyframes slideDown {
+      0% {
+        transform: translateY(-100%);
+        opacity: 0;
+      }
+      100% {
+        transform: translateY(0);
+        opacity: 1;
+      }
+    }
+    
+    @keyframes slideUp {
+      0% {
+        transform: translateY(100%);
+        opacity: 0;
+      }
+      100% {
+        transform: translateY(0);
+        opacity: 1;
+      }
+    }
+    
+    .img-slide-down {
+      animation: slideDown 1s ease-out;
+    }
+    
+    .img-slide-up {
+      animation: slideUp 1s ease-out;
+    }
+  </style>
               
 </head>
 <body class="bg-body-tertiary">
@@ -72,14 +103,14 @@
       <div class="container">
         <div class="row justify-content-center align-items-center">
           <div class="col-12 text-center">
-            <img src="./images/Ramoe.gif" alt="ramoe_logo" class="img-fluid mb-4 fade-image roll-out" style="max-height: 700px;"> <br>
+            <img src="./images/Ramoe.gif" alt="ramoe_logo" class="img-fluid mb-4 fade-image roll-out img-slide-down" style="max-height: 700px;"> <br>
           </div>
         </div>
       </div>
     </section>
   
     <section id="16 animali">
-      <div class="container">
+      <div class="container img-slide-up">
         <div class="row justify-content-center align-items-center">
           <div class="col-12 text-center">
             <h3 class="fade-text mb-4 fixed-size" style="letter-spacing: 5px"></h3>
