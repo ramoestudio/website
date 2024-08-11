@@ -111,56 +111,6 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
 
-<script>
-  var images = document.querySelectorAll('.fade-image');
-
-  // Function to handle scroll event
-  function handleScroll() {
-      images.forEach(function(image) {
-          var rect = image.getBoundingClientRect();
-          var windowHeight = window.innerHeight;
-
-          // If image is in the viewport and opacity is 0, fadeIn
-          if (rect.top >= 0 && rect.bottom <= windowHeight && image.style.opacity === "0") {
-              fadeIn(image);
-          }
-      });
-
-      // Remove scroll event listener after images have faded in
-      if (imagesFadedIn()) {
-          window.removeEventListener('scroll', handleScroll);
-      }
-  }
-
-  // Function to fade in an image
-  function fadeIn(image) {
-      var opacity = 0;
-      image.style.opacity = opacity;
-
-      var fadeInInterval = setInterval(function() {
-          if (opacity < 1) {
-              opacity += 0.05;
-              image.style.opacity = opacity;
-          } else {
-              clearInterval(fadeInInterval);
-          }
-      }, 50);
-  }
-
-  // Function to check if all images have faded in
-  function imagesFadedIn() {
-      var allFadedIn = true;
-      images.forEach(function(image) {
-          if (image.style.opacity !== "1") {
-              allFadedIn = false;
-          }
-      });
-      return allFadedIn;
-  }
-
-  // Add scroll event listener to trigger fade in effect
-  window.addEventListener('scroll', handleScroll);
-</script>
 
 <script>
 
