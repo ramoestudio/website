@@ -76,6 +76,11 @@
               <div class="collapse mt-3" id="collapse16animali">
                 <a href="#clairo" class="text-decoration-none text-dark" id="works-link3">clairo</a>
               </div>
+
+              <div class="collapse mt-3" id="collapse16animali">
+                <a href="#sb" class="text-decoration-none text-dark" id="works-link4">sabu baru</a>
+              </div>
+              
               <a href="./contact.html" class="text-decoration-none" id="about-link">
                 <p class="mb-4 text-black">Contact Us</p>
               </a>
@@ -139,6 +144,21 @@
           <div class="col-12 text-center">
           
             <img src="./images/clairo.jpg" alt="clairo"  class="img-fluid mb-4 fade-image roll-out " style="max-height: 700px;"> <br>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  <section id="sb">
+      <div class="container">
+        <div class="row justify-content-center align-items-center">
+          <div class="col-12 text-center">
+          
+            <img src="./images/trial-1_00.png (1).jpg" alt="nwjns_front"  class="img-fluid mb-4 fade-image roll-out " style="max-height: 7000px; "> <br>
+            <img src="./images/trial-1_01.jpg" alt="nwjns_front"  class="img-fluid mb-4 fade-image roll-out " style="max-height: 7000px; "> <br>
+            <img src="./images/trial-1_02.jpg" alt="nwjns_front"  class="img-fluid mb-4 fade-image roll-out " style="max-height: 7000px; "> <br>
+            <img src="./images/trial-1_03.jpg" alt="nwjns_front"  class="img-fluid mb-4 fade-image roll-out " style="max-height: 7000px; "> <br>
+            
           </div>
         </div>
       </div>
@@ -234,6 +254,20 @@ window.addEventListener('scroll', function() {
 <script>
 
   document.getElementById('works-link3').addEventListener('click', function(event) {
+    
+    document.getElementById('offcanvasScrolling').classList.remove('show');
+  });
+
+  
+  document.getElementById('about-link').addEventListener('click', function(event) {
+ 
+    document.getElementById('offcanvasScrolling').classList.remove('show');
+  });
+</script>
+
+<script>
+
+  document.getElementById('works-link4').addEventListener('click', function(event) {
     
     document.getElementById('offcanvasScrolling').classList.remove('show');
   });
