@@ -104,3 +104,42 @@
           </div>
         </div>
       </section>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
+
+<script>
+    window.addEventListener('scroll', function() {
+      var fadeImages = document.querySelectorAll('.fade-image');
+      var windowHeight = window.outerHeight;
+    
+      fadeImages.forEach(function(fadeImage) {
+        var imageBottom = fadeImage.getBoundingClientRect().bottom;
+        if (imageBottom < windowHeight) {
+          fadeImage.classList.remove('image-hidden');
+        } else {
+          fadeImage.classList.add('image-hidden');
+        }
+      });
+    });
+</script>
+
+<script>
+    window.addEventListener('scroll', function() {
+      var rollOutElements = document.querySelectorAll('.roll-out');
+      var windowHeight = window.innerHeight; // Tinggi viewport
+    
+      rollOutElements.forEach(function(element) {
+        var elementTop = element.getBoundingClientRect().top;
+        
+        if (elementTop < windowHeight) {
+          element.classList.add('visible'); // Tambahkan class 'visible' jika elemen masuk ke dalam viewport
+        } else {
+          element.classList.remove('visible'); // Hapus class 'visible' jika elemen keluar dari viewport
+        }
+      });
+    });
+  </script>
+
+</body>
+</html>
