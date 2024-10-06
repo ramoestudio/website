@@ -379,27 +379,29 @@ applyParallaxEffect('.second-scrolled-content');
 </script>
  
 <script>
-  document.addEventListener("DOMContentLoaded", function() {
-      console.log("DOM fully loaded and parsed");
-      const images = document.querySelectorAll('.roll-out');
-      console.log("Images found:", images); // Check if images are correctly selected
+  // Function to change the text color based on the theme
+  function updateTextColor() {
+    const htmlElement = document.documentElement; // Select the <html> element
+    const instagramText = document.querySelector('.instagram-text'); // Select the text element
 
-      const observer = new IntersectionObserver((entries) => {
-          entries.forEach(entry => {
-              console.log("Observer entry:", entry); // Log entry to check if it is intersecting
-              if (entry.isIntersecting) {
-                  console.log('Image is intersecting:', entry.target);
-                  entry.target.classList.add('visible');
-                  observer.unobserve(entry.target); // Optional: If you want to animate only once
-              }
-          });
-      }, { threshold: 0.1 }); // Adjust threshold as needed
+    if (htmlElement.getAttribute('data-bs-theme') === 'auto') {
+      instagramText.style.color = 'var(--bs-light)'; // Set color for dark theme
+    } else {
+      instagramText.style.color = 'var(--bs-dark)'; // Set color for light theme
+    }
+  }
 
-      images.forEach(image => {
-          observer.observe(image);
-      });
+  // Call the function on page load
+  updateTextColor();
+
+  // Optional: Add an event listener to change the text color when the theme changes
+  const observer = new MutationObserver(updateTextColor);
+  observer.observe(document.documentElement, {
+    attributes: true, // Listen to attribute changes
+    attributeFilter: ['data-bs-theme'] // Specifically the data-bs-theme attribute
   });
 </script>
+
 
 <script>
   document.addEventListener('DOMContentLoaded', function () {
@@ -422,6 +424,34 @@ applyParallaxEffect('.second-scrolled-content');
       observer.observe(document.documentElement, { attributes: true, attributeFilter: ['data-bs-theme'] });
   });
 </script>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+      const htmlElement = document.documentElement;
+      const switchElement = document.getElementById('darkModeSwitch');
+
+      // Baca tema saat ini dari localStorage atau default ke 'dark'
+      const currentTheme = localStorage.getItem('bsTheme') || 'dark';
+      htmlElement.setAttribute('data-bs-theme', currentTheme);
+
+      // Sinkronkan status switch dengan tema saat ini
+      if (switchElement) {
+          switchElement.checked = currentTheme === 'dark';
+
+          // Tambahkan event listener ke switch
+          switchElement.addEventListener('change', function () {
+              if (this.checked) {
+                  htmlElement.setAttribute('data-bs-theme', 'dark');
+                  localStorage.setItem('bsTheme', 'dark');
+              } else {
+                  htmlElement.setAttribute('data-bs-theme', 'light');
+                  localStorage.setItem('bsTheme', 'light');
+              }
+          });
+      }
+  });
+</script>
+
 
 </body>
 </html>
