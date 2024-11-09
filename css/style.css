@@ -108,4 +108,10 @@ body {
   transform: translateX(0); 
   max-width: 600px;
 }
+
+.same-size-image {
+  width: 650px; /* Sesuaikan ukuran lebar sesuai kebutuhan */
+  height: 650px; /* Sesuaikan ukuran tinggi sesuai kebutuhan */
+  object-fit: cover; /* Memastikan gambar terpotong sesuai rasio */
+}
 }
